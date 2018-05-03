@@ -48,9 +48,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <?php elseif($this->session->userdata('idRol')==3): ?>
                                 <img src="img/gestor.png" class="img-circle" alt="User Image">
                             <?php elseif($this->session->userdata('idRol')==2): ?>
-                                <img src="img/profesor.png" class="user-image" alt="User Image">
+                                <img src="img/profesor.png" class="img-circle" alt="User Image">
                             <?php elseif($this->session->userdata('idRol')==1): ?>
-                                <img src="img/estudiante.png" class="user-image" alt="User Image">
+                                <img src="img/estudiante.png" class="img-circle" alt="User Image">
+
                             <?php endif?>
                             <p>
                                 <?php  echo  $this->session->userdata('usuarioCorreo');?>
