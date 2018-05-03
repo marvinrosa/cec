@@ -14,11 +14,5 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <meta name="description" content="We craft awesome Bootstrap themes for free and share selected resources for web designer &amp; developer. Download Free HTML themes for Bootstrap" />
 
 
-    <meta property="og:url" content="https://www.boostraptheme.com/demo/index.html" />
-    <meta property="og:title" content="Startup - Business Free Bootstrap Template" />
-    <meta property="og:locale" content="en_IN" />
-    <meta property="og:site_name" content="Boostraptheme" />
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="BoostrapTheme" />
-    <meta name="twitter:creator" content="BoostrapTheme" />
+
     <title><?= $title?></title>

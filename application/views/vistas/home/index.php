@@ -6,17 +6,17 @@
             <div class="page-header">
                 <?php
 
-                //Externo
-                if($this->session->userdata('idRol')==1){
-                    $this->load->view('vistas/home/externo');
+                //Estudiante
+               if($this->session->userdata('idRol')==1){
+                    $this->load->view('vistas/home/estudiante');
                 }
-                //GestorInterno
-                elseif($this->session->userdata('idRol')==2){
-                    $this->load->view('vistas/home/gestorinterno');
-                }
-                //GestorAdmin
+                //Profesor
+               elseif ($this->session->userdata('idRol')==2){
+                   $this->load->view('vistas/home/profesor');
+               }
+                //Gestor
                 elseif ($this->session->userdata('idRol')==3){
-                    $this->load->view('vistas/home/gestoradmin');
+                    $this->load->view('vistas/home/gestor');
                 }
                 //Admin
                 elseif ($this->session->userdata('idRol')==4){

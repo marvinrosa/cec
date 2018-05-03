@@ -55,8 +55,29 @@ $route['translate_uri_dashes'] = FALSE;
 
 //Auth
 $route['login']="auth/index";
+$route['signin']='auth/signin';
+$route['logout']='auth/logout';
+
+
+//Modulo Inicio:  estuadiante,gestor,admin
+
+$route['home/(:any)']="estudiante/index";
+$route['home/(:any)']="profesor/index";
+$route['home/(:any)']="gestor/index";
+$route['home/(:any)']="admin/index";
+
+
+
+/*
+$route['home/(:any)']="admin/index";
+$route['home/(:any)']="gestorAdmin/index";
+$route['home/(:any)']="gestorInterno/index";
+$route['home/(:any)']="externo/index";
+*/
+$route['prueba']="prueba/index";
 
 //Principal
+
 $route['acerca']="principal/acerca";
 $route['servicios']="principal/servicios";
 $route['equipo']="principal/equipo";

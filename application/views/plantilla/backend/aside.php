@@ -3,6 +3,11 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 
+<?php
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+?>
+
 <aside class="main-sidebar">
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
@@ -10,11 +15,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="user-panel">
             <div class="pull-left image">
                 <?php if($this->session->userdata('idRol')==4): ?>
-                    <img src="<?php echo base_url(); ?>images/admin-512.png" class="img-circle" alt="User Image">
+                    <img src="img/admin.png" class="img-circle" alt="User Image">
                 <?php elseif($this->session->userdata('idRol')==3): ?>
-                    <img src="<?php echo base_url(); ?>images/gestor-admin.png" class="img-circle" alt="User Image">
+                    <img src="img/gestor.png" class="img-circle" alt="User Image">
                 <?php elseif($this->session->userdata('idRol')==2): ?>
-                    <img src="<?php echo base_url(); ?>images/gestor-int.png" weight="128" width="128" class="img-circle" alt="User Image">
+                    <img src="img/profesor.png" class="img-circle" alt="User Image">
+                <?php elseif($this->session->userdata('idRol')==1): ?>
+                    <img src="img/estudiante.png" weight="128" width="128" class="img-circle" alt="User Image">
                 <?php endif?>
             </div>
             <div class="pull-left info">
@@ -42,7 +49,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <li class="treeview">
                     <a href="#">
                         <i class="fa fa-th"></i>
-                        <span>Casos</span>
+                        <span>Articulos</span>
                         <span class="pull-right-container">
 
               <i class="fa fa-angle-left pull-right"></i>
@@ -51,10 +58,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </a>
                     <ul class="treeview-menu">
 
-                        <li><a href="<?php echo base_url()?>casos"><i class="fa fa-circle-o"></i>Casos por atender</a></li>
-                        <li><a href="<?php echo base_url()?>asignados"><i class="fa fa-circle-o"></i>Casos asignados</a></li>
-                        <li><a href="<?php echo base_url()?>rechazados""><i class="fa fa-circle-o"></i>Casos Rechazados</a></li>
-                        <li><a href="<?php echo base_url()?>historicos""><i class="fa fa-circle-o"></i>Casos Historicos</a></li>
+                        <li><a href="<?php echo base_url()?>casos"><i class="fa fa-circle-o"></i>Articulo nuevo</a></li>
+                        <li><a href="<?php echo base_url()?>asignados"><i class="fa fa-circle-o"></i>Articulos eliminados</a></li>
+                        <li><a href="<?php echo base_url()?>rechazados""><i class="fa fa-circle-o"></i>Articulos promovidos</a></li>
+                        <li><a href="<?php echo base_url()?>historicos""><i class="fa fa-circle-o"></i>Articulos publicados</a></li>
 
                     </ul>
                 </li>
@@ -68,19 +75,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="<?php echo base_url()?>tipo"><i class="fa fa-circle-o"></i>Tipos de Caso</a></li>
-                        <li><a href="<?php echo base_url()?>institucion"><i class="fa fa-circle-o"></i>Instituciones</a></li>
-                        <li><a href="<?php echo base_url()?>gestores"><i class="fa fa-circle-o"></i>Gestores</a></li>
+                        <li><a href="<?php echo base_url()?>tipo"><i class="fa fa-circle-o"></i>Cursos</a></li>
+                        <li><a href="<?php echo base_url()?>institucion"><i class="fa fa-circle-o"></i>Teatro</a></li>
+                        <li><a href="<?php echo base_url()?>gestores"><i class="fa fa-circle-o"></i>Asociaciones</a></li>
                     </ul>
                 </li>
 
 
-                <li><a href="<?php echo base_url()?>seguimiento"><i class="fa fa-book"></i> <span>Seguimiento</span></a></li>
+                <li><a href="<?php echo base_url()?>seguimiento"><i class="fa fa-book"></i> <span>Proyectos</span></a></li>
 
                 <li class="treeview">
                     <a href="#">
                         <i class="fa fa-print"></i>
-                        <span> Reportes </span>
+                        <span> Servicios </span>
                         <span class="pull-right-container">
                  <i class="fa fa-angle-left pull-right"></i>
                 </span>
@@ -131,8 +138,47 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </ul>
                 </li>
             </ul>
-
         <?php elseif($this->session->userdata('idRol')==2): ?>
+            <ul class="sidebar-menu" data-widget="tree">
+                <li class="header">Menu Principal</li>
+                <li class="treeview">
+                    <a href="<?php echo base_url()?>home">
+                        <i class="fa fa-home"></i> <span>Inicio</span>
+                    </a>
+                </li>
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-th"></i>
+                        <span>Casos</span>
+                        <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+
+                    </a>
+                    <ul class="treeview-menu">
+
+                        <li><a href="caso"><i class="fa fa-circle-o"></i> Ver casos</a></li>
+
+                        <li><a href="casos"><i class="fa fa-circle-o"></i> Ver casos</a></li>
+
+                        <li><a href="#"><i class="fa fa-circle-o"></i> Asignar casos</a></li>
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="">
+                        <i class="fa fa-print"></i>
+                        <span> Reportes </span>
+                        <span class="pull-right-container">
+                 <i class="fa fa-angle-left pull-right"></i>
+                </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="reportes"><i class="fa fa-circle-o"></i> <span>Reporte general</span></a></li>
+                        <li><a href="reportes2"><i class="fa fa-circle-o"></i> <span>Casos por institucion</span></a></li>
+                    </ul>
+                </li>
+            </ul>
+        <?php elseif($this->session->userdata('idRol')==1): ?>
 
             <ul class="sidebar-menu" data-widget="tree">
                 <li class="header">Menu Principal</li>
@@ -162,5 +208,5 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </section>
     <!-- /.sidebar -->
 </aside>
-    <!-- /.sidebar -->
+<!-- /.sidebar -->
 </aside>

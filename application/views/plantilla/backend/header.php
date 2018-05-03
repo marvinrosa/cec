@@ -8,10 +8,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <a href="home" class="logo">
         <!-- mini logo for sidebar mini 50x50 pixels -->
         <span class="logo-mini">
-           <label for="" style="font-size: 15px;">PQRS</label>
+           <label for="" style="font-size: 15px;">CEC</label>
         </span>
         <!-- logo for regular state and mobile devices -->
-        <span class="logo-lg"><b>PQ</b>RS</span>
+        <span class="logo-lg"><b>CEC-</b>UDB</span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
@@ -30,11 +30,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <li class="dropdown user user-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <?php if($this->session->userdata('idRol')==4): ?>
-                            <img src="<?php echo base_url(); ?>images/admin-512.png" class="user-image" alt="User Image">
+                            <img src="img/admin.png" class="user-image" alt="User Image">
                         <?php elseif($this->session->userdata('idRol')==3): ?>
-                            <img src="<?php echo base_url(); ?>images/gestor-admin.png" class="user-image" alt="User Image">
+                            <img src="img/gestor.png" class="user-image" alt="User Image">
                         <?php elseif($this->session->userdata('idRol')==2): ?>
-                            <img src="<?php echo base_url(); ?>images/gestor-int.png" weight="128" width="128" class="user-image" alt="User Image">
+                            <img src="img/profesor.png" class="user-image" alt="User Image">
+                        <?php elseif($this->session->userdata('idRol')==1): ?>
+                            <img src="img/estudiante.png" class="user-image" alt="User Image">
                         <?php endif?>
                         <span class="hidden-xs"><?php  echo  $this->session->userdata('usuarioCorreo');?></span>
                     </a>
@@ -42,29 +44,30 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <!-- User image -->
                         <li class="user-header">
                             <?php if($this->session->userdata('idRol')==4): ?>
-                                <img src="<?php echo base_url(); ?>images/admin-512.png" class="img-circle" alt="User Image">
+                                <img src="img/admin.png" class="img-circle" alt="User Image">
                             <?php elseif($this->session->userdata('idRol')==3): ?>
-                                <img src="<?php echo base_url(); ?>images/gestor-admin.png" class="img-circle" alt="User Image">
+                                <img src="img/gestor.png" class="img-circle" alt="User Image">
                             <?php elseif($this->session->userdata('idRol')==2): ?>
-                                <img src="<?php echo base_url(); ?>images/gestor-int.png" weight="128" width="128" class="img-circle" alt="User Image">
+                                <img src="img/profesor.png" class="user-image" alt="User Image">
+                            <?php elseif($this->session->userdata('idRol')==1): ?>
+                                <img src="img/estudiante.png" class="user-image" alt="User Image">
                             <?php endif?>
                             <p>
                                 <?php  echo  $this->session->userdata('usuarioCorreo');?>
-
 
                                 <small><?php
 
                                     //Externo
                                     if($this->session->userdata('idRol')==1){
-                                        echo "Externo";
+                                        echo "Estudiante";
                                     }
-                                    //GestorInterno
+                                    //Estudiante
                                     elseif($this->session->userdata('idRol')==2){
-                                        echo "Gestor Interno";
+                                        echo "Profesor";
                                     }
-                                    //GestorAdmin
+                                    //Gestor
                                     elseif ($this->session->userdata('idRol')==3){
-                                        echo "Gestor Administrativo";
+                                        echo "Gestor de Contenido";
                                     }
                                     //Admin
                                     elseif ($this->session->userdata('idRol')==4){

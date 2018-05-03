@@ -31,9 +31,5 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <script src="<?php echo base_url(); ?>js/script-theme.js"></script>
   <script src="<?php echo base_url(); ?>js/script-slider-video.js"></script>
 
-
-      
-    
-
 </body>
 </html>
