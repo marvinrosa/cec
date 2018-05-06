@@ -40,7 +40,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <ul class="sidebar-menu" data-widget="tree">
                 <li class="header">Menu Principal</li>
                 <li>
-                    <a href="<?php echo base_url()?>home">
+                    <a href="<?php echo base_url()?>inicio">
                         <i class="fa fa-home"></i> <span>Inicio</span>
                     </a>
 
@@ -58,10 +58,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </a>
                     <ul class="treeview-menu">
 
-                        <li><a href="<?php echo base_url()?>casos"><i class="fa fa-circle-o"></i>Articulo nuevo</a></li>
-                        <li><a href="<?php echo base_url()?>asignados"><i class="fa fa-circle-o"></i>Articulos eliminados</a></li>
-                        <li><a href="<?php echo base_url()?>rechazados""><i class="fa fa-circle-o"></i>Articulos promovidos</a></li>
-                        <li><a href="<?php echo base_url()?>historicos""><i class="fa fa-circle-o"></i>Articulos publicados</a></li>
+                        <li><a href="<?php echo base_url()?>nuevo"><i class="fa fa-circle-o"></i>Articulo nuevo</a></li>
+                        <li><a href="<?php echo base_url()?>desestimados"><i class="fa fa-circle-o"></i>Articulos desestimados</a></li>
+                        <li><a href="<?php echo base_url()?>promovidos""><i class="fa fa-circle-o"></i>Articulos promovidos</a></li>
+                        <li><a href="<?php echo base_url()?>publicados""><i class="fa fa-circle-o"></i>Articulos publicados</a></li>
 
                     </ul>
                 </li>
@@ -75,135 +75,158 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="<?php echo base_url()?>tipo"><i class="fa fa-circle-o"></i>Cursos</a></li>
-                        <li><a href="<?php echo base_url()?>institucion"><i class="fa fa-circle-o"></i>Teatro</a></li>
-                        <li><a href="<?php echo base_url()?>gestores"><i class="fa fa-circle-o"></i>Asociaciones</a></li>
+                        <li><a href="<?php echo base_url()?>cursos"><i class="fa fa-circle-o"></i>Cursos</a></li>
+                        <li><a href="<?php echo base_url()?>teatro"><i class="fa fa-circle-o"></i>Teatro</a></li>
+                        <li><a href="<?php echo base_url()?>asociaciones"><i class="fa fa-circle-o"></i>Asociaciones</a></li>
                     </ul>
                 </li>
 
 
-                <li><a href="<?php echo base_url()?>seguimiento"><i class="fa fa-book"></i> <span>Proyectos</span></a></li>
+                <li><a href="<?php echo base_url()?>proyectos"><i class="fa fa-book"></i> <span>Proyectos</span></a></li>
 
-                <li class="treeview">
-                    <a href="#">
-                        <i class="fa fa-print"></i>
-                        <span> Servicios </span>
-                        <span class="pull-right-container">
-                 <i class="fa fa-angle-left pull-right"></i>
-                </span>
-                    </a>
-                    <ul class="treeview-menu">
-                        <li><a href="<?php echo base_url()?>reportes"><i class="fa fa-circle-o"></i> <span>Reporte general</span></a></li>
-                        <li><a href="<?php echo base_url()?>reportes2"><i class="fa fa-circle-o"></i> <span>Casos por institucion</span></a></li>
-                    </ul>
-                </li>
+                <li><a href="<?php echo base_url()?>servicios"><i class="fa fa-book"></i> <span>Servicios</span></a></li>
+               
             </ul>
         <?php elseif($this->session->userdata('idRol')==3): ?>
+              <!-- /.search form -->
+            <!-- sidebar menu: : style can be found in sidebar.less -->
             <ul class="sidebar-menu" data-widget="tree">
                 <li class="header">Menu Principal</li>
-                <li class="treeview">
-                    <a href="<?php echo base_url()?>home">
+                <li>
+                    <a href="<?php echo base_url()?>inicio">
                         <i class="fa fa-home"></i> <span>Inicio</span>
                     </a>
+
                 </li>
+
                 <li class="treeview">
                     <a href="#">
                         <i class="fa fa-th"></i>
-                        <span>Casos</span>
+                        <span>Articulos</span>
                         <span class="pull-right-container">
+
               <i class="fa fa-angle-left pull-right"></i>
             </span>
 
                     </a>
                     <ul class="treeview-menu">
 
-                        <li><a href="caso"><i class="fa fa-circle-o"></i> Ver casos</a></li>
+                        <li><a href="<?php echo base_url()?>nuevo"><i class="fa fa-circle-o"></i>Articulo nuevo</a></li>
+                        <li><a href="<?php echo base_url()?>desestimados"><i class="fa fa-circle-o"></i>Articulos desestimados</a></li>
+                        <li><a href="<?php echo base_url()?>promovidos""><i class="fa fa-circle-o"></i>Articulos promovidos</a></li>
+                        <li><a href="<?php echo base_url()?>publicados""><i class="fa fa-circle-o"></i>Articulos publicados</a></li>
 
-                        <li><a href="casos"><i class="fa fa-circle-o"></i> Ver casos</a></li>
-
-                        <li><a href="#"><i class="fa fa-circle-o"></i> Asignar casos</a></li>
                     </ul>
                 </li>
+
                 <li class="treeview">
-                    <a href="">
-                        <i class="fa fa-print"></i>
-                        <span> Reportes </span>
+                    <a href="#">
+                        <i class="fa fa-laptop"></i>
+                        <span>Catálogos</span>
                         <span class="pull-right-container">
-                 <i class="fa fa-angle-left pull-right"></i>
-                </span>
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="reportes"><i class="fa fa-circle-o"></i> <span>Reporte general</span></a></li>
-                        <li><a href="reportes2"><i class="fa fa-circle-o"></i> <span>Casos por institucion</span></a></li>
+                        <li><a href="<?php echo base_url()?>cursos"><i class="fa fa-circle-o"></i>Cursos</a></li>
+                        <li><a href="<?php echo base_url()?>teatro"><i class="fa fa-circle-o"></i>Teatro</a></li>
+                        <li><a href="<?php echo base_url()?>asociaciones"><i class="fa fa-circle-o"></i>Asociaciones</a></li>
                     </ul>
                 </li>
-            </ul>
+
+
+                <li><a href="<?php echo base_url()?>proyectos"><i class="fa fa-book"></i> <span>Proyectos</span></a></li>
+
+                <li><a href="<?php echo base_url()?>servicios"><i class="fa fa-book"></i> <span>Servicios</span></a></li>
+               
+            
         <?php elseif($this->session->userdata('idRol')==2): ?>
+              <!-- /.search form -->
+            <!-- sidebar menu: : style can be found in sidebar.less -->
             <ul class="sidebar-menu" data-widget="tree">
                 <li class="header">Menu Principal</li>
-                <li class="treeview">
-                    <a href="<?php echo base_url()?>home">
+                <li>
+                    <a href="<?php echo base_url()?>inicio">
                         <i class="fa fa-home"></i> <span>Inicio</span>
                     </a>
+
                 </li>
+
                 <li class="treeview">
                     <a href="#">
                         <i class="fa fa-th"></i>
-                        <span>Casos</span>
+                        <span>Articulos</span>
                         <span class="pull-right-container">
+
               <i class="fa fa-angle-left pull-right"></i>
             </span>
 
                     </a>
                     <ul class="treeview-menu">
 
-                        <li><a href="caso"><i class="fa fa-circle-o"></i> Ver casos</a></li>
+                        <li><a href="<?php echo base_url()?>nuevo"><i class="fa fa-circle-o"></i>Articulo nuevo</a></li>
+                        <li><a href="<?php echo base_url()?>desestimados"><i class="fa fa-circle-o"></i>Articulos desestimados</a></li>
+                        <li><a href="<?php echo base_url()?>promovidos""><i class="fa fa-circle-o"></i>Articulos promovidos</a></li>
+                        <li><a href="<?php echo base_url()?>publicados""><i class="fa fa-circle-o"></i>Articulos publicados</a></li>
 
-                        <li><a href="casos"><i class="fa fa-circle-o"></i> Ver casos</a></li>
-
-                        <li><a href="#"><i class="fa fa-circle-o"></i> Asignar casos</a></li>
                     </ul>
                 </li>
+
                 <li class="treeview">
-                    <a href="">
-                        <i class="fa fa-print"></i>
-                        <span> Reportes </span>
+                    <a href="#">
+                        <i class="fa fa-laptop"></i>
+                        <span>Catálogos</span>
                         <span class="pull-right-container">
-                 <i class="fa fa-angle-left pull-right"></i>
-                </span>
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="reportes"><i class="fa fa-circle-o"></i> <span>Reporte general</span></a></li>
-                        <li><a href="reportes2"><i class="fa fa-circle-o"></i> <span>Casos por institucion</span></a></li>
+                        <li><a href="<?php echo base_url()?>cursos"><i class="fa fa-circle-o"></i>Cursos</a></li>
+                        <li><a href="<?php echo base_url()?>teatro"><i class="fa fa-circle-o"></i>Teatro</a></li>
+                        <li><a href="<?php echo base_url()?>asociaciones"><i class="fa fa-circle-o"></i>Asociaciones</a></li>
                     </ul>
                 </li>
-            </ul>
+                
+                 <li><a href="<?php echo base_url()?>proyectos"><i class="fa fa-book"></i> <span>Cursos</span></a></li>
+
+                <li><a href="<?php echo base_url()?>proyectos"><i class="fa fa-book"></i> <span>Proyectos</span></a></li>
+
+               
+           
         <?php elseif($this->session->userdata('idRol')==1): ?>
-
+              <!-- /.search form -->
+            <!-- sidebar menu: : style can be found in sidebar.less -->
             <ul class="sidebar-menu" data-widget="tree">
                 <li class="header">Menu Principal</li>
-                <li class="treeview">
-                    <a href="home">
+                <li>
+                    <a href="<?php echo base_url()?>inicio">
                         <i class="fa fa-home"></i> <span>Inicio</span>
                     </a>
+
                 </li>
+
+            
+
                 <li class="treeview">
                     <a href="#">
-                        <i class="fa fa-th"></i>
-                        <span>Casos</span>
+                        <i class="fa fa-laptop"></i>
+                        <span>Catálogos</span>
                         <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
-
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="<?php echo base_url() ?>verCasos"><i class="fa fa-circle-o"></i> Casos por atender</a></li>
-                        <li><a href="<?php echo base_url(); ?>GestorInterno/historicoR"><i class="fa fa-circle-o"></i>Histórico casos resueltos</a></li>                    </ul>
+                        <li><a href="<?php echo base_url()?>cursos"><i class="fa fa-circle-o"></i>Cursos</a></li>
+                        <li><a href="<?php echo base_url()?>teatro"><i class="fa fa-circle-o"></i>Teatro</a></li>
+                        <li><a href="<?php echo base_url()?>asociaciones"><i class="fa fa-circle-o"></i>Asociaciones</a></li>
+                    </ul>
                 </li>
-                <li><a href="<?php echo base_url()?>seguimiento/interno"><i class="fa fa-book"></i> <span>Seguimiento</span></a></li>
-            </ul>
 
 
+                <li><a href="<?php echo base_url()?>proyectos"><i class="fa fa-book"></i> <span>Proyectos</span></a></li>
+
+               
+    
         <?php endif?>
     </section>
     <!-- /.sidebar -->

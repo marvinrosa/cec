@@ -6,6 +6,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $this->load->view('plantilla/head_principal');
 $this->load->view('plantilla/frontend/head_css');
 $this->load->view('plantilla/frontend/nav');
+$this->load->view('plantilla/frontend/banner');
 $this->load->view('vistas/'.$contenido);
 $this->load->view('plantilla/frontend/footer');
 $this->load->view('plantilla/footer_principal');

@@ -1604,29 +1604,38 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
       margin-bottom: 0; } }
 
 .btn {
-  display: inline-block;
-  font-weight: 400;
+  flex: 1 1 auto;
+  margin: 10px;
+  padding: 15px 20px;
+  border: 2px solid #6191A8;
   text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  user-select: none;
-  border: 1px solid transparent;
-  padding: 0.375rem 0.75rem;
-  font-size: 1rem;
-  line-height: 1.5;
-  border-radius: 0.25rem;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
-  .btn:hover, .btn:focus {
-    text-decoration: none; }
-  .btn:focus, .btn.focus {
-    outline: 0;
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
-  .btn.disabled, .btn:disabled {
-    opacity: 0.65; }
-  .btn:not(:disabled):not(.disabled) {
-    cursor: pointer; }
-  .btn:not(:disabled):not(.disabled):active, .btn:not(:disabled):not(.disabled).active {
-    background-image: none; }
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  transition: .3s; }
+  .btn:after {
+    position: absolute;
+    transition: .3s;
+    content: '';
+    width: 0;
+    left: 50%;
+    bottom: 0;
+    height: 3px;
+    background: #003977; }
+  .btn.btn-white:after {
+    height: 120%;
+    left: -10%;
+    transform: skewX(15deg);
+    z-index: -1; }
+  .btn:hover:after {
+    width: 100%;
+    left: 0; }
+  .btn.btn-white:hover {
+    cursor: pointer;
+    color: white; }
+  .btn.btn-white:hover:after {
+    left: -10%;
+    width: 120%; }
 
 a.btn.disabled,
 fieldset:disabled a.btn {
@@ -6380,7 +6389,7 @@ header {
 .services {
   background: #C4D7ED; }
   .services .service-desc-cont {
-    margin-bottom: 40px; }
+    margin-bottom: 30%; }
     .services .service-desc-cont img {
       height: 40px;
       width: 40px;
@@ -6866,7 +6875,7 @@ footer {
     border-bottom: 10px solid #003977; }
   .contact .contact-detail {
     padding: 100px 0;
-    background: #6191A8;
+    background: #8AD6CC;
     color: #003977;
     text-align: center; }
     @media (max-width: 767px) {
