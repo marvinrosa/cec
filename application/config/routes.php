@@ -67,17 +67,19 @@ $route['home/(:any)']="gestor/index";
 $route['home/(:any)']="admin/index";
 
 
-
-/*
-$route['home/(:any)']="admin/index";
-$route['home/(:any)']="gestorAdmin/index";
-$route['home/(:any)']="gestorInterno/index";
-$route['home/(:any)']="externo/index";
-*/
+// Modulo de Prueba
 $route['prueba']="prueba/index";
 
-//Principal
 
+// Modulo de Noticas
+$route['articulos']="noticias/index";
+$route['nueva']="noticias/nueva";
+
+
+
+
+
+//Principal
 $route['acerca']="principal/acerca";
 $route['servicios']="principal/servicios";
 $route['equipo']="principal/equipo";

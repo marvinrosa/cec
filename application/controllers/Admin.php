@@ -11,12 +11,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             if($this->session->userdata('idRol')!=4){
                 redirect(logout);
             }
+            $this->load->model('noticias_model');
         }
 
         public function index() {
             $data = array();
             $data['contenido'] = 'home/admin';
             $data['panel_title']="Bienvenido.";
+
             $this->load->view('homeContent',$data);
       }
     }

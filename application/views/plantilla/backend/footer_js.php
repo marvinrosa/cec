@@ -17,13 +17,31 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-show-password/1.0.3/bootstrap-show-password.min.js"></script>
 
-</script>
-<!-- DataTables -->
+
 <script src="<?php echo base_url(); ?>js/jquery.dataTables.min.js"></script>
 <script src="<?php echo base_url(); ?>js/dataTables.bootstrap.min.js"></script>
 <script src="<?php echo base_url(); ?>js/dataTables.buttons.min.js"></script>
-
-
+<script src="https://cdn.ckeditor.com/4.9.2/standard/ckeditor.js"></script>
+<script>
+    $('#tabla').DataTable({
+        "language":{
+            "lengthMenu": "Mostrar _MENU_ registros por página.",
+            "zeroRecords": "No se encontraron resultados en su búsqueda.",
+            "searchPlaceholder": "Buscar en los registros",
+            "info": "Mostrando registros de _START_ al _END_ de un total de _TOTAL_ registros",
+            "infoEmpty": "No existen registros",
+            "infoFiltered": "(filtrado de un total de _MAX_ registros)",
+            "responsive":"true",
+            "search": "Buscar",
+            "paginate": {
+                "first": "Primero",
+                "last": "Último",
+                "next": "Siguiente",
+                "previous": "Anterior"
+            }
+        }
+    });
+</script>
 
 
 

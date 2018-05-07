@@ -58,7 +58,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </a>
                     <ul class="treeview-menu">
 
-                        <li><a href="<?php echo base_url()?>nuevo"><i class="fa fa-circle-o"></i>Articulo nuevo</a></li>
+                        <li><a href="<?php echo base_url()?>nueva"><i class="fa fa-circle-o"></i>Articulo nuevo</a></li>
+                        <li><a href="<?php echo base_url()?>articulos"><i class="fa fa-circle-o"></i>Articulos</a></li>
                         <li><a href="<?php echo base_url()?>desestimados"><i class="fa fa-circle-o"></i>Articulos desestimados</a></li>
                         <li><a href="<?php echo base_url()?>promovidos""><i class="fa fa-circle-o"></i>Articulos promovidos</a></li>
                         <li><a href="<?php echo base_url()?>publicados""><i class="fa fa-circle-o"></i>Articulos publicados</a></li>

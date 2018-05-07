@@ -10,10 +10,9 @@ echo link_tag('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/fon
 
 <link rel="stylesheet" href="<?php echo base_url(); ?>css/bootstrap.min.css" media="all">
 
-  <!-- DataTables -->
-<link rel="stylesheet" href="<?php echo base_url(); ?>css/dataTables.bootstrap.min.css">
-<link rel="stylesheet" href="<?php echo base_url(); ?>css/buttons.dataTables.min.css">
-<link rel="stylesheet" href="<?php echo base_url(); ?>css/jquery.dataTables.min.css">
+<!-- DataTables -->
+<link rel="stylesheet" href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+
 <link rel="stylesheet" href="<?php echo base_url(); ?>css/estilos.css" media="all">
 
 <link rel="stylesheet" href="<?php echo base_url(); ?>css/ionicons.min.css" media="all">
